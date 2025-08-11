@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yano AI Technologies Inc. - AI School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A8A', // Deep tech blue
+                        secondary: '#06B6D4', // Neon cyan
+                        accent: '#8B5CF6', // Vibrant purple
+                        neon: '#34D399', // Neon green
+                    },
+                    animation: {
+                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+                        'fade-in': 'fade-in 1s ease-out',
+                    },
+                    keyframes: {
+                        'pulse-glow': {
+                            '0%, 100%': { boxShadow: '0 0 10px rgba(6, 182, 212, 0.5)' },
+                            '50%': { boxShadow: '0 0 20px rgba(6, 182, 212, 0.8)' },
+                        },
+                        'fade-in': {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-primary to-accent sticky top-0 z-20 shadow-lg">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <h1 class="text-3xl font-bold tracking-tight">Yano AI Technologies Inc.</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-neon transition-colors duration-300">Home</a>
+                <a href="#about" class="hover:text-neon transition-colors duration-300">About</a>
+                <a href="#courses" class="hover:text-neon transition-colors duration-300">Courses</a>
+                <a href="#events" class="hover:text-neon transition-colors duration-300">Events</a>
+                <a href="#blog" class="hover:text-neon transition-colors duration-300">Blog</a>
+            </nav>
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary px-4 py-2">
+            <a href="#home" class="block py-2 hover:text-neon">Home</a>
+            <a href="#about" class="block py-2 hover:text-neon">About</a>
+            <a href="#courses" class="block py-2 hover:text-neon">Courses</a>
+            <a href="#events" class="block py-2 hover:text-neon">Events</a>
+            <a href="#blog" class="block py-2 hover:text-neon">Blog</a>
+        </div>
+    </header>
+
+    <!-- Hero Section (Home) -->
+    <section id="home" class="bg-gradient-to-b from-primary to-gray-900 py-20 text-center">
+        <div class="container mx-auto px-4 animate-fade-in">
+            <h2 class="text-5xl font-extrabold mb-4 tracking-tight">Yano AI Technologies Inc.</h2>
+            <p class="text-xl mb-6 max-w-2xl mx-auto">Pioneering the future with transformative AI education. Unleash your potential in the world of artificial intelligence.</p>
+            <a href="#courses" class="inline-block bg-secondary text-white px-8 py-3 rounded-full hover:bg-neon transition-all duration-300 animate-pulse-glow">Discover Courses</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8 text-neon">About Us</h2>
+            <p class="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">Yano AI Technologies Inc. is at the forefront of AI education, blending cutting-edge technology with innovative teaching methods. Our goal is to empower learners to shape the future of AI responsibly and creatively.</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg animate-fade-in">
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">Our Vision</h3>
+                    <p class="text-gray-300">To inspire and educate the next generation of AI innovators, driving progress with ethical and impactful solutions.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg animate-fade-in">
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">Our Expertise</h3>
+                    <p class="text-gray-300">Led by AI pioneers and industry experts, our team brings real-world experience to the classroom.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="bg-gray-800 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8 text-neon">Courses Offered</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-neon transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">AI Core</h3>
+                    <p class="text-gray-300 mb-4">Master foundational AI concepts, including algorithms, data science, and practical applications.</p>
+                    <button class="bg-accent text-white px-4 py-2 rounded-full hover:bg-neon transition-colors duration-300" onclick="showAlert('Enroll in AI Core')">Enroll Now</button>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-neon transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">Machine Learning Elite</h3>
+                    <p class="text-gray-300 mb-4">Advanced techniques in ML with hands-on projects in real-world scenarios.</p>
+                    <button class="bg-accent text-white px-4 py-2 rounded-full hover:bg-neon transition-colors duration-300" onclick="showAlert('Enroll in Machine Learning Elite')">Enroll Now</button>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-neon transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">Neural Network Studio</h3>
+                    <p class="text-gray-300 mb-4">Deep dive into deep learning, focusing on neural networks, vision, and NLP.</p>
+                    <button class="bg-accent text-white px-4 py-2 rounded-full hover:bg-neon transition-colors duration-300" onclick="showAlert('Enroll in Neural Network Studio')">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8 text-neon">Upcoming Events</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg animate-fade-in">
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">AI Future Summit</h3>
+                    <p class="text-gray-300 mb-2">Date: September 20, 2025</p>
+                    <p class="text-gray-300 mb-4">Connect with AI visionaries to explore the next frontier of technology.</p>
+                    <button class="bg-accent text-white px-4 py-2 rounded-full hover:bg-neon transition-colors duration-300" onclick="showAlert('Register for AI Future Summit')">Register</button>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg animate-fade-in">
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">Deep Learning Hackathon</h3>
+                    <p class="text-gray-300 mb-2">Date: October 25, 2025</p>
+                    <p class="text-gray-300 mb-4">Compete to build innovative AI solutions in a 24-hour coding challenge.</p>
+                    <button class="bg-accent text-white px-4 py-2 rounded-full hover:bg-neon transition-colors duration-300" onclick="showAlert('Register for Deep Learning Hackathon')">Register</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="bg-gray-800 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8 text-neon">Our Blog</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-neon transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">AI in 2030: What’s Next?</h3>
+                    <p class="text-gray-300 mb-4">A glimpse into the future of artificial intelligence and its societal impact.</p>
+                    <a href="#" class="text-neon hover:underline">Read More</a>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-neon transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">Bias in AI: Challenges & Solutions</h3>
+                    <p class="text-gray-300 mb-4">Addressing ethical concerns in AI development for a fairer future.</p>
+                    <a href="#" class="text-neon hover:underline">Read More</a>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-neon transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">Building Your First Neural Network</h3>
+                    <p class="text-gray-300 mb-4">A step-by-step guide to creating your own AI model.</p>
+                    <a href="#" class="text-neon hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-primary to-accent py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-300">&copy; 2025 Yano AI Technologies Inc. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#contact" class="text-neon hover:underline">Contact</a>
+                <a href="#privacy" class="text-neon hover:underline">Privacy Policy</a>
+                <a href="#terms" class="text-neon hover:underline">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Simple Alert for Enroll and Register Buttons
+        function showAlert(action) {
+            alert(`Thank you for your interest in ${action}! We'll reach out with more details.`);
+        }
+
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const elements = document.querySelectorAll('.animate-fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
+        }, { threshold: 0.2 });
+        elements.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
